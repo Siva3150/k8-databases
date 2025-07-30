@@ -38,7 +38,7 @@ spec:
     component: cart
     project: roboshop
     tier: app
-   spec:
+  spec:
       containers:
       - name: cart
         image: joindevops/cart:v1
@@ -52,7 +52,7 @@ spec:
         envFrom:
         - configMapRef:
             name: cart
-            
+
 ---
 apiVersion: v1
 kind: Service
