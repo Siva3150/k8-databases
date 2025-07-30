@@ -38,21 +38,21 @@ spec:
     component: cart
     project: roboshop
     tier: app
-  spec: 
-   containers: 
-   - name: cart 
-     image: siva3150/cart:v1
-     resources:
+   spec:
+      containers:
+      - name: cart
+        image: joindevops/cart:v1
+        resources:
           requests:
             cpu: "50m"
             memory: "128Mi"
           limits:
             cpu: "100m"
             memory: "256Mi"
-          envFrom:
-          - configMapRef:
+        envFrom:
+        - configMapRef:
             name: cart
-
+            
 ---
 apiVersion: v1
 kind: Service
